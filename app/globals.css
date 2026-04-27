@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #ffffff;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.stream-player {
+  --vjs-theme-primary: #e50914;
+  font-family: inherit;
+}
+
+.stream-player.video-js {
+  height: 100%;
+  width: 100%;
+  background: #000000;
+}
+
+.stream-player .vjs-tech {
+  object-fit: contain;
+}
+
+.stream-player .vjs-poster img {
+  object-fit: cover;
+}
+
+.stream-player .vjs-control-bar {
+  height: 5.25rem;
+  padding: 0 1rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0));
+  font-size: 0.95rem;
+}
+
+.stream-player .vjs-button > .vjs-icon-placeholder::before,
+.stream-player .vjs-volume-panel .vjs-icon-placeholder::before {
+  line-height: 3.2;
+}
+
+.stream-player .vjs-play-progress,
+.stream-player .vjs-volume-level {
+  background-color: #e50914;
+}
+
+.stream-player .vjs-slider {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.stream-player .vjs-load-progress,
+.stream-player .vjs-load-progress div {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.stream-player .vjs-big-play-button {
+  border: 0;
+  width: 5rem;
+  height: 5rem;
+  margin-top: -2.5rem;
+  margin-left: -2.5rem;
+  border-radius: 999px;
+  background: rgba(229, 9, 20, 0.9);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.stream-player:hover .vjs-big-play-button,
+.stream-player .vjs-big-play-button:focus {
+  background: #f6121d;
+  transform: scale(1.06);
+}
+
+.stream-player .vjs-big-play-button .vjs-icon-placeholder::before {
+  line-height: 5rem;
+}
+
+.stream-player .vjs-menu-button-popup .vjs-menu {
+  margin-bottom: 2.8rem;
+}
+
+.stream-player .vjs-menu-content {
+  border-radius: 0.5rem;
+  background-color: rgba(20, 20, 20, 0.96);
+}
+
+.stream-player .vjs-menu-item.vjs-selected,
+.stream-player .vjs-menu-item.vjs-selected:focus,
+.stream-player .vjs-menu-item.vjs-selected:hover {
+  background-color: #e50914;
+}
+
+.stream-seekbar {
+  appearance: none;
+  border-radius: 999px;
+  outline: none;
+}
+
+.stream-seekbar::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #e50914;
+  box-shadow: 0 0 0 6px rgba(229, 9, 20, 0.18);
+}
+
+.stream-seekbar::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #e50914;
+  box-shadow: 0 0 0 6px rgba(229, 9, 20, 0.18);
+}
